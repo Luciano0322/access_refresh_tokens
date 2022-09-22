@@ -24,6 +24,17 @@
 
 ## Description
 
+這個專案主要分享 token 交換的過程，有用到 prisma, Jwt 的工具。
+在安裝完套件後，下以下指令可以生成 prisma 的 default 資料夾及 .env 的檔案:
+```bash
+$ npx prisma init
+```
+
+在調整完 .prisma 檔案後，要先確認 db 狀態有起，這裡示範的是透過 docker-compose.yml 來建立 db，完成後不要忘記調整 .env 檔案的 DATABASE_URL 將其對應 docker-compose.yml 的欄位做調整，完成後可以下以下指令來創建在 .prisma 裏面的 model :
+```bash
+$ npx prisma migrate dev --cerate-only
+```
+
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
